@@ -31,7 +31,22 @@ export async function getRecipeByID(id) {
 // CREATE A RECIPE
 export async function createRecipe(newRecipe) {
     // uuidv4
-}
+    const recipeJSON = await fs.readFile(fileName, "utf-8");
+    // parse the json
+    const recipes = JSON.parse(recipeJSON);
+
+    const recipeAdded = {
+      id: uuidv4(),
+      title: newRecipe.title,
+      ingredients: newRecipe.ingredients,
+      instructions: newRecipe.instructions,
+      image: newRecipe.image
+    };
+recipes.push(newRecipe);
+await fs.writeFile(fileName, JSON.stringify(recipes));
+return recipeAdded;
+  }
+
 
 // UPDATE A RECIPE BY ID
 export async function updateRecipeByID(id, updatedRecipe) {}
