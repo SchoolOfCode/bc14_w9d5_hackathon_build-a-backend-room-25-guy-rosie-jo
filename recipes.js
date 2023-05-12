@@ -45,7 +45,7 @@ export async function createRecipe(newRecipe) {
   recipes.push(newRecipe);
   await fs.writeFile(fileName, JSON.stringify(recipes));
   return recipeAdded;
-  
+
   }
 
 
@@ -54,17 +54,21 @@ export async function updateRecipeByID(id, updatedRecipe) {
   const recipeJSON = await fs.readFile(fileName, "utf-8");
   const recipes = JSON.parse(recipeJSON);
 
-  if (recipes.id === id) {
-  const index = (recipes.indexOf(id))
-  recipes.splice(index, 1, updatedRecipe)
-  }
-  //console.log(recipes);
+  const index = recipes.findIndex(recipe => recipe.id === id);
+  // console.log(index);
+  recipes.splice(index, 1, updatedRecipe);
+  // console.log(recipes);
   return updatedRecipe;
-
   // Feed in ID number 
   // New object that feeds in to JSON 
   // Replace recipe with that ID with a new updated recipe object 
 }
 
 // DELETE A RECIPE BY ID
-export async function deleteRecipeByID(id) {}
+export async function deleteRecipeByID(id) {
+  const recipeJSON = await fs.readFile(fileName, "utf-8");
+  const recipes = JSON.parse(recipeJSON);
+
+
+
+}
