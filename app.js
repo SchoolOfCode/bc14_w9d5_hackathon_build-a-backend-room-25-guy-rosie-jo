@@ -14,20 +14,20 @@ const PORT = 3000;
 // app.use(express.static("public"));
 app.use(express.json());
 
-// all recipes
-app.get("/api/recipes", (res, req) => {
-  if (req.query.success === "true") {
-  res.json({})
-  res.send(getRecipes());
-} }
+// Get all recipes
+app.get("/api/recipes", async (req, res) => {
+  const allRecipes = await getRecipes();
+  res.send({payload: allRecipes, success: true});
+} 
 )
 
-
-
-
-
-
-
+// Getting a specific recipe by ID
+app.get("/api/recipes/:id", async (req, res) => {
+  const allRecipesID = await getRecipeByID();
+  res.send({payload: allRecipesID, success: true});
+  console.log(allRecipesID)
+} 
+)
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
