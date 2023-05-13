@@ -22,9 +22,6 @@ app.get("/api/recipes", async (req, res) => {
   res.send({success, payload: allRecipes});
   });
 
-// Getting a specific recipe by ID
-// The req.params property is an object that contains the properties which are mapped to the named route "parameters". For example, if you have a route as /api/:name, then the "name" property is available as req.params.name. The default value of this object is {}.
-
 // Get recipe by ID
 app.get("/api/recipes/:id", async (req, res) => {
   const recipeByID = await getRecipeByID(req.params.id);

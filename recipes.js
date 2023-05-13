@@ -15,10 +15,9 @@ export async function getRecipes() {
 
 // GET A RECIPE BY ID
 export async function getRecipeByID(id) {
-    // read the json file
     const recipeJSON = await fs.readFile(fileName, "utf-8");
-    // parse the json
     const recipes = JSON.parse(recipeJSON);
+
     // for loop
     for (let i = 0; i < recipes.length; i++) {
         if (recipes[i].id === id) {
@@ -45,11 +44,9 @@ export async function createRecipe(newRecipe) {
   recipes.push(newRecipe);
   await fs.writeFile(fileName, JSON.stringify(recipes));
   return recipeAdded;
-
   }
 
-
-// UPDATE A RECIPE BY ID
+// UPDATE A RECIPE BY ID (not yet working)
 export async function updateRecipeByID(id, updatedRecipe) {
   const recipeJSON = await fs.readFile(fileName, "utf-8");
   const recipes = JSON.parse(recipeJSON);
@@ -68,7 +65,4 @@ export async function updateRecipeByID(id, updatedRecipe) {
 export async function deleteRecipeByID(id) {
   const recipeJSON = await fs.readFile(fileName, "utf-8");
   const recipes = JSON.parse(recipeJSON);
-
-
-
 }
