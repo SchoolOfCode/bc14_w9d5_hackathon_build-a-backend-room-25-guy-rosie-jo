@@ -11,7 +11,7 @@ import {
 const app = express();
 const PORT = 3000;
 
-// app.use(express.static("public"));
+app.use(express.static("public"));
 app.use(express.json());
 
 // Get all recipes
@@ -45,7 +45,7 @@ app.post("/api/recipes", async (req, res) => {
     payload.image;
   const success = newRecipeBody !== undefined;
   if (success) {
-    res.json({ success, payload: createdRecipe });
+    res.json({ success, payload });
   }
   res.status(418).json({ success });
 });
@@ -57,9 +57,9 @@ app.patch("/api/recipes/:id", async (req, res) => {
 });
 
 // Delete recipe by id
-app.delete("api/recipes/:id", async (req, res) => {
+app.delete("/api/recipes/:id", async (req, res) => {
   const payload = await deleteRecipeByID(req.params.id);
-  res.json({success: true, payload})
+  res.json({ success: true, payload });
 });
 
 app.listen(PORT, () => {

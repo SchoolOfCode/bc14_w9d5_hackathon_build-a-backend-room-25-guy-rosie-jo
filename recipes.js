@@ -12,8 +12,7 @@ export async function getRecipes() {
 
 // GET A RECIPE BY ID
 export async function getRecipeByID(id) {
-  const data = await fs.readFile(fileName, "utf-8");
-  const recipes = JSON.parse(data);
+  const recipes = await getRecipes();
   for (let i = 0; i < recipes.length; i++) {
     if (recipes[i].id === id) {
       let recipe = recipes[i];

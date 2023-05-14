@@ -1,15 +1,1 @@
-[
-  {
-    "id": "4c848d48-b81e-4d6f-b45d-7b3090f4f8ef",
-    "title": "Beans on Toast",
-    "ingredients": ["150g of beans", "150g of butter", "150g of toast"],
-    "instructions": "Put the butter in your mouth, wait 2 seconds to allow slight melting. Then follow with the toast. Swish around for 10-15 seconds to allow even coating of butter on the toast. Then add the beans, slowly.\n  \n    Season to taste.",
-    "image": "https://natashaskitchen.com/wp-content/uploads/2019/04/Best-Burger-4-500x375.jpg"
-  },
-  {
-    "title": "Chopped Tomatoes",
-    "ingredients": ["tomato"],
-    "instructions": "Chop tomatoes. Eat Tomatoes.",
-    "image": "https://natashaskitchen.com/wp-content/uploads/2019/04/Best-Burger-4-500x375.jpg"
-  }
-]
+[{"id":"4c848d48-b81e-4d6f-b45d-7b3090f4f8ef","title":"Beans on Toast","ingredients":["150g of beans","150g of butter","150g of toast"],"instructions":"Put the butter in your mouth, wait 2 seconds to allow slight melting. Then follow with the toast. Swish around for 10-15 seconds to allow even coating of butter on the toast. Then add the beans, slowly.\n  \n    Season to taste.","image":"https://natashaskitchen.com/wp-content/uploads/2019/04/Best-Burger-4-500x375.jpg"},{"title":"Chopped Tomatoes","ingredients":["tomato"],"instructions":"Chop tomatoes. Eat Tomatoes.","image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzl09DVro8_SkRlDn6hCIiCeoWS9yQ-IfO7A&usqp=CAU","id":"8fa8013c-879c-44c5-be75-6d7d4185d49e"},{"title":"Sliced bread","ingredients":["one loaf of your favourite bread"],"instructions":"With a breadknife, cut the bread into thick even slices.","image":"https://etzq49yfnmd.exactdn.com/wp-content/uploads/2022/03/bread.jpg?strip=all&lossy=1&ssl=1","id":"8fa8013c-879c-44c5-be75-6d7d4185d48d"}]
